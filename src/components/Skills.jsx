@@ -2,28 +2,23 @@ function Skills({ skills }) {
     return (
       <section
         id="skills"
-        className="bg-[#0A2418] py-20"
+        className="bg-[#0A2418] py-16 sm:py-20"
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
   
-          {/* Header */}
-          <div className="mb-14 text-center">
-            <p className="mb-3 font-semibold uppercase tracking-widest text-emerald-400">
+          <div className="mb-12 text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-emerald-400">
               My Skills
             </p>
   
-            <h2 className="text-4xl font-black md:text-5xl">
+            <h2 className="text-3xl font-black sm:text-4xl lg:text-5xl">
               Technologies & Tools
             </h2>
           </div>
   
-          {/* Skills Grid */}
           <div
             className="
-            grid
-            gap-8
-            sm:grid-cols-2
-            lg:grid-cols-3
+            grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3
             "
           >
             {skills.map((skill, index) => (
@@ -33,17 +28,15 @@ function Skills({ skills }) {
                 overflow-hidden
                 rounded-3xl
                 border
-                border-green-800
+                border-green-900
                 bg-[#071A12]
-                transition
+                transition-all
                 duration-300
                 hover:-translate-y-2
                 hover:border-emerald-500
-                hover:shadow-[0_0_30px_rgba(16,185,129,0.25)]
                 "
               >
-                {/* Image */}
-                <div className="h-56 overflow-hidden">
+                <div className="h-24 sm:h-28 overflow-hidden">
                   <img
                     src={skill.image}
                     alt={skill.title}
@@ -58,14 +51,12 @@ function Skills({ skills }) {
                   />
                 </div>
   
-                {/* Content */}
-                <div className="p-6">
-  
-                  <h3 className="mb-3 text-2xl font-bold text-emerald-400">
+                <div className="p-3">
+                <h3 className="mb-2 text-sm font-bold text-emerald-400">
                     {skill.title}
                   </h3>
   
-                  <p className="mb-5 text-slate-300">
+                  <p className="mb-2 text-xs leading-5 text-slate-300">
                     {skill.description}
                   </p>
   
@@ -76,9 +67,7 @@ function Skills({ skills }) {
                         className="
                         rounded-full
                         bg-emerald-500/10
-                        px-3
-                        py-1
-                        text-sm
+                        px-2 py-0.5 text-[10px]
                         text-emerald-300
                         "
                       >
@@ -86,7 +75,6 @@ function Skills({ skills }) {
                       </span>
                     ))}
                   </div>
-  
                 </div>
               </article>
             ))}

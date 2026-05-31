@@ -14,57 +14,90 @@ function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-green-900/50 bg-[#071A12]/95 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-6 flex h-20 items-center justify-between">
-        
-        {/* Logo */}
-        <a
-          href="#home"
-          className="text-2xl font-black tracking-wide text-emerald-400"
+    <>
+      <header
+        className="
+        fixed
+        top-0
+        left-0
+        w-full
+        z-50
+        h-16
+        bg-[#071A12]
+        border-b
+        border-green-900/50
+        "
+      >
+        <div
+          className="
+          max-w-6xl
+          mx-auto
+          h-full
+          px-4
+          flex
+          items-center
+          justify-between
+          "
         >
-          IZENGO
-        </a>
+          <a
+            href="#home"
+            className="text-xl font-bold text-emerald-400"
+          >
+            IZENGO
+          </a>
 
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="font-medium text-slate-300 transition hover:text-emerald-400"
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
+          {/* Desktop */}
+          <nav className="hidden md:flex gap-6">
+            {links.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="
+                text-sm
+                text-slate-300
+                hover:text-emerald-400
+                transition
+                "
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
 
-        {/* Mobile Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-2xl text-white md:hidden"
-        >
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </button>
-      </div>
+          {/* Mobile */}
+          <button
+            className="md:hidden text-white text-xl"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="border-t border-green-900/50 bg-[#0A2418] md:hidden">
-          <div className="flex flex-col px-6 py-4">
+        {isOpen && (
+          <div className="md:hidden bg-[#0A2418] border-t border-green-900/50">
             {links.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="py-3 text-slate-300 hover:text-emerald-400"
+                className="
+                block
+                px-4
+                py-3
+                text-slate-300
+                hover:text-emerald-400
+                "
               >
                 {link.name}
               </a>
             ))}
           </div>
-        </div>
-      )}
-    </header>
+        )}
+      </header>
+
+      {/* Spacer */}
+      <div className="h-16"></div>
+    </>
   );
 }
 

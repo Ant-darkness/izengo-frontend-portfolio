@@ -10,86 +10,131 @@ import {
     return (
       <section
         id="contact"
-        className="py-20"
+        className="py-16 sm:py-20"
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
   
-          {/* Header */}
-          <div className="mb-14 text-center">
-            <p className="mb-3 font-semibold uppercase tracking-widest text-emerald-400">
+          <div className="mb-12 text-center">
+          <p className="mt-1 text-xs text-slate-400">
+              Contact
+            </p>
+  
+            <h2 className="text-2xl font-black sm:text-3xl lg:text-4xl">
               Get In Touch
-            </p>
-  
-            <h2 className="text-4xl font-black md:text-5xl">
-              Contact Me
             </h2>
-  
-            <p className="mx-auto mt-4 max-w-2xl text-slate-300">
-              Feel free to reach out for collaboration, projects, or opportunities.
-            </p>
           </div>
   
-          {/* Cards */}
-          <div
+        <div
             className="
             grid
-            gap-6
-            sm:grid-cols-2
-            lg:grid-cols-3
+            grid-cols-2
+            md:grid-cols-3
+            lg:grid-cols-5
+            gap-3
             "
-          >
+            >
   
-            {/* WhatsApp */}
             <a
               href={contact.whatsapp}
               target="_blank"
-              className="group rounded-3xl border border-green-800 bg-[#0A2418] p-6 transition hover:border-emerald-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.25)]"
+              className="
+              rounded-2xl
+              border
+              border-green-900
+              bg-[#0A2418]
+              p-3
+              text-center
+              transition
+              hover:border-emerald-500
+              hover:-translate-y-1
+              "
             >
-              <FaWhatsapp className="text-3xl text-emerald-400" />
-              <h3 className="mt-4 text-xl font-bold">WhatsApp</h3>
-              <p className="mt-2 text-slate-300">Chat instantly</p>
+              <FaWhatsapp className="mx-auto text-xl text-emerald-400" />
+              <h3 className="mt-2 text-sm font-semibold">
+                WhatsApp
+              </h3>
             </a>
   
-            {/* Email */}
             <a
               href={`mailto:${contact.email}`}
-              className="group rounded-3xl border border-green-800 bg-[#0A2418] p-6 transition hover:border-emerald-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.25)]"
+              className="
+              rounded-2xl
+              border
+              border-green-900
+              bg-[#0A2418]
+              p-3
+              text-center
+              transition
+              hover:border-emerald-500
+              hover:-translate-y-1
+              "
             >
-              <FaEnvelope className="text-3xl text-emerald-400" />
-              <h3 className="mt-4 text-xl font-bold">Email</h3>
-              <p className="mt-2 text-slate-300">{contact.email}</p>
+              <FaEnvelope className="mx-auto text-xl text-emerald-400" />
+              <h3 className="mt-2 text-sm font-semibold">
+                Email
+              </h3>
             </a>
   
-            {/* Phone */}
             <a
               href={`tel:${contact.phone}`}
-              className="group rounded-3xl border border-green-800 bg-[#0A2418] p-6 transition hover:border-emerald-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.25)]"
+              className="
+              rounded-2xl
+              border
+              border-green-900
+              bg-[#0A2418]
+              p-3
+              text-center
+              transition
+              hover:border-emerald-500
+              hover:-translate-y-1
+              "
             >
-              <FaPhone className="text-3xl text-emerald-400" />
-              <h3 className="mt-4 text-xl font-bold">Phone</h3>
-              <p className="mt-2 text-slate-300">{contact.phone}</p>
+              <FaPhone className="mx-auto text-xl text-emerald-400" />
+              <h3 className="mt-2 text-sm font-semibold">
+                Phone
+              </h3>
             </a>
   
-            {/* LinkedIn */}
             <a
               href={contact.linkedin}
               target="_blank"
-              className="group rounded-3xl border border-green-800 bg-[#0A2418] p-6 transition hover:border-emerald-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.25)]"
+              className="
+              rounded-2xl
+              border
+              border-green-900
+              bg-[#0A2418]
+              p-3
+              text-center
+              transition
+              hover:border-emerald-500
+              hover:-translate-y-1
+              "
             >
-              <FaLinkedin className="text-3xl text-emerald-400" />
-              <h3 className="mt-4 text-xl font-bold">LinkedIn</h3>
-              <p className="mt-2 text-slate-300">Professional Profile</p>
+              <FaLinkedin className="mx-auto text-xl text-emerald-400" />
+              <h3 className="mt-4 text-lg font-bold">
+                LinkedIn
+              </h3>
             </a>
   
-            {/* GitHub */}
             <a
               href={contact.github}
               target="_blank"
-              className="group rounded-3xl border border-green-800 bg-[#0A2418] p-6 transition hover:border-emerald-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.25)]"
+              className="
+              rounded-2xl
+              border
+              border-green-900
+              bg-[#0A2418]
+              p-3
+              text-center
+              transition
+              hover:border-emerald-500
+              hover:-translate-y-1
+              "
             >
-              <FaGithub className="text-3xl text-emerald-400" />
-              <h3 className="mt-4 text-xl font-bold">GitHub</h3>
-              <p className="mt-2 text-slate-300">View Projects</p>
+              <FaGithub className="mx-auto text-xl text-emerald-400" />
+              <h3 className="mt-4 text-lg font-bold">
+                GitHub
+              </h3>
             </a>
   
           </div>

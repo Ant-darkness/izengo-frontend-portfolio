@@ -2,32 +2,30 @@ function Projects({ projects }) {
     return (
       <section
         id="projects"
-        className="py-20"
+        className="bg-[#071A12] py-16 sm:py-20"
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
   
           {/* Header */}
-          <div className="mb-14 text-center">
-            <p className="mb-3 font-semibold uppercase tracking-widest text-emerald-400">
-              My Work
+          <div className="mb-12 text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-emerald-400">
+              My Projects
             </p>
   
-            <h2 className="text-4xl font-black md:text-5xl">
-              Projects
+            <h2 className="text-3xl font-black sm:text-4xl lg:text-5xl">
+              Featured Projects
             </h2>
   
-            <p className="mx-auto mt-4 max-w-2xl text-slate-300">
-              A collection of machine learning and data science projects built to solve real-world problems.
+            <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
+              Machine Learning, Data Analytics, Artificial Intelligence,
+              and Data Science projects that solve real-world problems.
             </p>
           </div>
   
-          {/* Grid */}
+          {/* Projects Grid */}
           <div
             className="
-            grid
-            gap-8
-            sm:grid-cols-2
-            lg:grid-cols-3
+            grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3
             "
           >
             {projects.map((project, index) => (
@@ -38,16 +36,17 @@ function Projects({ projects }) {
                 overflow-hidden
                 rounded-3xl
                 border
-                border-green-800
+                border-green-900
                 bg-[#0A2418]
-                transition
+                transition-all
+                duration-300
                 hover:-translate-y-2
                 hover:border-emerald-500
-                hover:shadow-[0_0_40px_rgba(16,185,129,0.25)]
+                hover:shadow-[0_0_30px_rgba(16,185,129,0.25)]
                 "
               >
                 {/* Image */}
-                <div className="h-52 overflow-hidden">
+                <div className="h-24 sm:h-28 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -55,7 +54,7 @@ function Projects({ projects }) {
                     h-full
                     w-full
                     object-cover
-                    transition
+                    transition-transform
                     duration-500
                     group-hover:scale-110
                     "
@@ -63,17 +62,16 @@ function Projects({ projects }) {
                 </div>
   
                 {/* Content */}
-                <div className="p-6">
-  
-                  <h3 className="mb-2 text-xl font-bold text-emerald-400">
+                <div className="p-3">
+                  <h3 className="mb-3 text-sm font-bold text-emerald-400">
                     {project.title}
                   </h3>
   
-                  <p className="mb-4 text-sm text-slate-300">
+                  <p className="mb-5 text-xs leading-5 text-slate-300">
                     {project.description}
                   </p>
   
-                  <div className="mb-4 flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {project.tags?.map((tag) => (
                       <span
                         key={tag}
@@ -83,6 +81,7 @@ function Projects({ projects }) {
                         px-3
                         py-1
                         text-xs
+                        font-medium
                         text-emerald-300
                         "
                       >
@@ -90,23 +89,6 @@ function Projects({ projects }) {
                       </span>
                     ))}
                   </div>
-  
-                  {/*<button
-                    className="
-                    w-full
-                    rounded-full
-                    bg-emerald-500
-                    py-3
-                    text-sm
-                    font-semibold
-                    text-black
-                    transition
-                    hover:bg-emerald-400
-                    "
-                  >
-                    View Project
-                  </button>*/}
-  
                 </div>
               </article>
             ))}

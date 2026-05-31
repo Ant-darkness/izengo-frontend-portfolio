@@ -1,43 +1,32 @@
 @import "tailwindcss";
 
-/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
-}
-
-/* Base styles */
-body {
-    background-color: #071a12;
-    color: white;
     overflow-x: hidden;
 }
 
+body {
+    overflow-x: hidden;
+    background: #071A12;
+    color: white;
+}
 
-/* Scrollbar (optional nice touch) */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
 
-::-webkit-scrollbar-track {
-    background: #071a12;
-}
-
 ::-webkit-scrollbar-thumb {
     background: #10b981;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #34d399;
-}
-
-/* Links */
-a {
-    transition: 0.3s ease;
-}
-
-/* Smooth hover default */
-button,
-a {
-    transition: all 0.3s ease;
+    border-radius: 20px;
 }

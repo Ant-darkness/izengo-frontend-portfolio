@@ -46,12 +46,12 @@ function App() {
         }
       )
       .catch((error) => {
-        console.error("Error loading portfolio:", error);
+        console.error(error);
       });
   }, []);
 
   return (
-    <div className="bg-[#071A12] text-white min-h-screen">
+    <div className="min-h-screen bg-[#071A12] text-white overflow-x-hidden">
       <Navbar />
 
       <Hero profile={profile} />
