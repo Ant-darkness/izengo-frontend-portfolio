@@ -24,10 +24,10 @@ function Qualifications() {
               </h3>
   
               <div className="space-y-2 text-slate-300">
-                <p>🎓 EASTC — Bachelor of Data Science</p>
-                <p>🎓 Advanced Level</p>
-                <p>🎓 Secondary Education</p>
-                <p>🎓 Primary Education</p>
+                <p>🎓 EASTC — Bachelor Degree of Data Science: 2023 - present</p>
+                <p>🎓 Advanced Level - Mwenge Boys High School: 2021 - 2023 </p>
+                <p>🎓 Secondary Education - Jana Secondary School: 2017 - 2020</p>
+                <p>🎓 Primary Education - Jana Primary School: 2010 - 2016</p>
               </div>
             </div>
   
